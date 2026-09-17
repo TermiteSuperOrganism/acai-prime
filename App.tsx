@@ -29,6 +29,9 @@ export default function App() {
             source={require('#')}
             style={styles.image}/>
           </View>
+          <Text style={styles.featuredTitle}>Açaí Turbinado 500ml</Text>
+          <Text style={styles.featuredDescription}>Açaí puro batido com morango, banana, leite condensado e granola crocante</Text>
+          <Text style={styles.featuredPrice}>R$ 22,90</Text>
           {/*Card*/}
         </View>
         {/*Body*/} 
