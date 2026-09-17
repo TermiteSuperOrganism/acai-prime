@@ -1,11 +1,11 @@
 import { Image, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
-type CoffeeCardProps = {
+type DishCardProps = {
     name: string;
     description: string;
     price: string;
 };
-export default function DishCard({ name, description, price }: CoffeeCardProps) {
+export default function DishCard({ name, description, price }: DishCardProps) {
     return (
         
             <View style={styles.cardItem}>
