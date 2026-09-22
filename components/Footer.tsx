@@ -3,7 +3,7 @@ import { Image, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, T
 export default function Footer() {
     return (
         <View style={styles.footer}>
-            <Text style={styles.footerText}>Cafeteria de Fulano</Text>
+            <Text style={styles.footerText}>Açaí Prime • O sabor autêntico da Amazônia</Text>
         </View>
     )
 }

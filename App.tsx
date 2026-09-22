@@ -6,8 +6,20 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import CoffeeCard from './components/DishCard';
 import CustomButton from './components/CustomButton';
+import DishCard from './components/DishCard';
 
 export default function App() {
+  const [name,setName]=useState('');
+  const [message,setMessage]=useState('');
+
+  const handleOrder=() => {
+    if(name.trim() ===''){
+      setMessage('Por favor, informe seu nome!')
+    }else{
+      setMessage(`Olá, ${name}! Pedido iniciado com sucesso`)
+    }
+  }
+
   return (
     <KeyboardAvoidingView style={styles.container} behavior="padding" keyboardVerticalOffset={30}>
       <ScrollView>
@@ -26,7 +38,7 @@ export default function App() {
           {/*Card*/}
           <View style={styles.featured}>
             <Image 
-            source={require('#')}
+            source={require('./assets/splash-icon.png')}
             style={styles.image}/>
           </View>
           <Text style={styles.featuredTitle}>Açaí Turbinado 500ml</Text>
@@ -34,7 +46,35 @@ export default function App() {
           <Text style={styles.featuredPrice}>R$ 22,90</Text>
           {/*Card*/}
         </View>
+
+        {/* Section */}
+        <Text style={styles.sectionTitle}>Nossos copos e tigelas</Text>
+
+        <View style={styles.menu}>
+          <DishCard name={'Açaí Tradicional'} description={'Açaí cremoso com banana e granola tradicional'} price={'14,00'}></DishCard>
+          <DishCard name={'Copo Tropical'} description={'Camadas de açaí, morango, kiwi e leite em pó'} price={'18,50'}></DishCard>
+          <DishCard name={'Vitamina de Açaí'} description={'Bebida energética batida com guaraná e aveia'} price={'12,00'}></DishCard>
+          <DishCard name={'Açaí Fit Zero'} description={'Zero adição de açúcar, com chia e castanhas'} price={'19,90'}></DishCard>
+        </View>
+        {/* Section */}
+
+        <View style={styles.orderSection}>
+          <Text style={styles.question}>Qual é o seu nome?</Text>
+          <TextInput style={styles.input} 
+          placeholder='Digite seu nome'
+          value={name}
+          onChangeText={setName}/>
+
+          <CustomButton title={'Fazer meu pedido'} onPress={handleOrder}/>
+
+          {message !== '' && (
+            <Text style={styles.messageText}>{message}</Text>
+          )}
+        </View>
         {/*Body*/} 
+        {/* Footer */}
+        <Footer></Footer>
+        {/* Footer */}
 
       </ScrollView>
     </KeyboardAvoidingView>
@@ -99,7 +139,7 @@ const styles = StyleSheet.create({
   featuredPrice: {
     fontSize: 20,
     fontWeight: '800',
-    color: "#C67C4E",
+    color: "#46295a",
     marginTop: 8
   },
   sectionTitle: {
@@ -142,7 +182,7 @@ const styles = StyleSheet.create({
   messageText:{
     fontSize: 16,
     fontWeight:"800",
-    color: "#c67c4e",
+    color: "#46295a",
     alignItems: "center",
     marginTop: 20
   }

@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     cardPrice: {
         fontSize: 16,
         fontWeight: "800",
-        color: "#C67C4E",
+        color: "#46295a",
         marginTop: 12
     },
 })
