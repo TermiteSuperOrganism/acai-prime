@@ -38,7 +38,7 @@ export default function App() {
           {/*Card*/}
           <View style={styles.featured}>
             <Image 
-            source={require('./assets/splash-icon.png')}
+            source={require('./assets/featured-image.png')}
             style={styles.image}/>
           </View>
           <Text style={styles.featuredTitle}>Açaí Turbinado 500ml</Text>
@@ -51,10 +51,10 @@ export default function App() {
         <Text style={styles.sectionTitle}>Nossos copos e tigelas</Text>
 
         <View style={styles.menu}>
-          <DishCard name={'Açaí Tradicional'} description={'Açaí cremoso com banana e granola tradicional'} price={'14,00'}></DishCard>
-          <DishCard name={'Copo Tropical'} description={'Camadas de açaí, morango, kiwi e leite em pó'} price={'18,50'}></DishCard>
-          <DishCard name={'Vitamina de Açaí'} description={'Bebida energética batida com guaraná e aveia'} price={'12,00'}></DishCard>
-          <DishCard name={'Açaí Fit Zero'} description={'Zero adição de açúcar, com chia e castanhas'} price={'19,90'}></DishCard>
+          <DishCard imageSrc={require('./assets/product-image.png')} name={'Açaí Tradicional'} description={'Açaí cremoso com banana e granola tradicional'} price={'14,00'}></DishCard>
+          <DishCard imageSrc={require('./assets/product-image (1).png')} name={'Copo Tropical'} description={'Camadas de açaí, morango, kiwi e leite em pó'} price={'18,50'}></DishCard>
+          <DishCard imageSrc={require('./assets/product-image (2).png')} name={'Vitamina de Açaí'} description={'Bebida energética batida com guaraná e aveia'} price={'12,00'}></DishCard>
+          <DishCard imageSrc={require('./assets/product-image (3).png')} name={'Açaí Fit Zero'} description={'Zero adição de açúcar, com chia e castanhas'} price={'19,90'}></DishCard>
         </View>
         {/* Section */}
 

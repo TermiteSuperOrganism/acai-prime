@@ -1,14 +1,18 @@
-import { Image, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Image, ImageSourcePropType, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 type DishCardProps = {
+    imageSrc: ImageSourcePropType
     name: string;
     description: string;
     price: string;
 };
-export default function DishCard({ name, description, price }: DishCardProps) {
+export default function DishCard({ imageSrc,name, description, price }: DishCardProps) {
     return (
         
             <View style={styles.cardItem}>
+                <Image 
+                    source={imageSrc}
+                    style={styles.image}/>
                 <Text style={styles.cardTitle}>{name}</Text>
                 <Text style={styles.cardDescription}>{description}</Text>
                 <Text style={styles.cardPrice}>R$ {price}</Text>
@@ -51,4 +55,10 @@ const styles = StyleSheet.create({
         color: "#46295a",
         marginTop: 12
     },
+    image: {
+    width: "100%",
+    height: 188,
+    borderRadius: 16,
+    marginBottom: 16
+  },
 })
