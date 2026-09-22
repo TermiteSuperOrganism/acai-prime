@@ -9,26 +9,26 @@ import CustomButton from './components/CustomButton';
 import DishCard from './components/DishCard';
 
 export default function App() {
-  const [name,setName]=useState('');
-  const [message,setMessage]=useState('');
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleOrder=() => {
-    if(name.trim() ===''){
+  const handleOrder = () => {
+    if (name.trim() === '') {
       setMessage('Por favor, informe seu nome!')
-    }else{
-      setMessage(`Olá, ${name}! Pedido iniciado com sucesso`)
+    } else {
+      setMessage(`${<Ionicons name="checkmark-circle" size={20} color="#2f2b2c"></Ionicons>}Olá, ${name}! Pedido iniciado com sucesso`)
     }
   }
 
   return (
     <KeyboardAvoidingView style={styles.container} behavior="padding" keyboardVerticalOffset={30}>
       <ScrollView>
-        <Header/>
+        <Header />
 
-        {/*Body*/} 
+        {/*Body*/}
         <View style={styles.content}>
 
-          {/*Title*/} 
+          {/*Title*/}
           <View style={styles.contentInitial}>
             <Text style={styles.contentTitle}>Refresque seu dia!</Text>
             <Text style={styles.contentSubtitle}>Escolha seu açaí favorito de hoje</Text>
@@ -37,13 +37,15 @@ export default function App() {
 
           {/*Card*/}
           <View style={styles.featured}>
-            <Image 
-            source={require('./assets/featured-image.png')}
-            style={styles.image}/>
+            <Image
+              source={require('./assets/featured-image.png')}
+              style={styles.image} />
+            <Text style={styles.featuredTitle}>Açaí Turbinado 500ml</Text>
+            <Text><Ionicons name="shopping-bag" size={20} color="#2f2b2c"></Ionicons>Mais pedido</Text>
+            <Text style={styles.featuredDescription}>Açaí puro batido com morango, banana, leite condensado e granola crocante</Text>
+            <Text style={styles.featuredPrice}>R$ 22,90</Text>
+            <Text>Adicionar</Text>
           </View>
-          <Text style={styles.featuredTitle}>Açaí Turbinado 500ml</Text>
-          <Text style={styles.featuredDescription}>Açaí puro batido com morango, banana, leite condensado e granola crocante</Text>
-          <Text style={styles.featuredPrice}>R$ 22,90</Text>
           {/*Card*/}
         </View>
 
@@ -60,18 +62,19 @@ export default function App() {
 
         <View style={styles.orderSection}>
           <Text style={styles.question}>Qual é o seu nome?</Text>
-          <TextInput style={styles.input} 
-          placeholder='Digite seu nome'
-          value={name}
-          onChangeText={setName}/>
+          <Ionicons name="person" size={20} color="#2f2b2c"></Ionicons>
+          <TextInput style={styles.input}
+            placeholder='Digite seu nome'
+            value={name}
+            onChangeText={setName} />
 
-          <CustomButton title={'Fazer meu pedido'} onPress={handleOrder}/>
+          <CustomButton title={'Fazer meu pedido'} onPress={handleOrder} />
 
           {message !== '' && (
             <Text style={styles.messageText}>{message}</Text>
           )}
         </View>
-        {/*Body*/} 
+        {/*Body*/}
         {/* Footer */}
         <Footer></Footer>
         {/* Footer */}
@@ -85,8 +88,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f9f9f9',
-//    alignItems: 'center',
-//    justifyContent: 'center',
+    //    alignItems: 'center',
+    //    justifyContent: 'center',
   },
   content: {
     paddingHorizontal: 24,
@@ -178,10 +181,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     fontSize: 16,
   },
-  
-  messageText:{
+
+  messageText: {
     fontSize: 16,
-    fontWeight:"800",
+    fontWeight: "800",
     color: "#46295a",
     alignItems: "center",
     marginTop: 20

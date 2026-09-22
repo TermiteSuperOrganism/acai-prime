@@ -1,3 +1,5 @@
+import { Ionicons } from '@expo/vector-icons';
+import AntDesign from '@expo/vector-icons/AntDesign';
 import { Image, ImageSourcePropType, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 type DishCardProps = {
@@ -16,6 +18,7 @@ export default function DishCard({ imageSrc,name, description, price }: DishCard
                 <Text style={styles.cardTitle}>{name}</Text>
                 <Text style={styles.cardDescription}>{description}</Text>
                 <Text style={styles.cardPrice}>R$ {price}</Text>
+                <Ionicons name='plus-circle' size={20} color="#2f2b2c"></Ionicons>
             </View>
         
     );

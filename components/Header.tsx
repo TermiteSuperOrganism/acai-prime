@@ -10,7 +10,9 @@ export default function Header() {
             </View>
 
             <View style={styles.avatarPlaceholder}>
-                <Ionicons name="person" size={20} color="#2f2b2c"></Ionicons>
+                <Image
+                    source={require('../assets/Rectangle.png')}
+                    style={styles.image} />
             </View>
         </View>
     );
@@ -44,5 +46,11 @@ const styles = StyleSheet.create(
             justifyContent: "center",
             alignItems: "center"
         },
+        image: {
+    width: '100%',
+    height: '100%',
+    borderRadius: 16,
+    marginBottom: 16
+  },
     }
 )
