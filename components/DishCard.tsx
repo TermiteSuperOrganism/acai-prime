@@ -3,7 +3,7 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import { Image, ImageSourcePropType, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 type DishCardProps = {
-    imageSrc: ImageSourcePropType
+    imageSrc: ImageSourcePropType;
     name: string;
     description: string;
     price: string;

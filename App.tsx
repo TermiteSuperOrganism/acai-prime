@@ -40,8 +40,10 @@ export default function App() {
             <Image
               source={require('./assets/featured-image.png')}
               style={styles.image} />
-            <Text style={styles.featuredTitle}>Açaí Turbinado 500ml</Text>
-            <Text><Ionicons name="shopping-bag" size={20} color="#2f2b2c"></Ionicons>Mais pedido</Text>
+            <View style={styles.featuredFirstLine}>
+              <Text style={styles.featuredTitle}>Açaí Turbinado 500ml</Text>
+              <View style={styles.frameMaisPedido}><Text style={styles.maisPedido}><Ionicons name="shopping-bag" size={20} color="#2f2b2c"></Ionicons>Mais pedido</Text></View>
+            </View>
             <Text style={styles.featuredDescription}>Açaí puro batido com morango, banana, leite condensado e granola crocante</Text>
             <Text style={styles.featuredPrice}>R$ 22,90</Text>
             <Text>Adicionar</Text>
@@ -185,8 +187,20 @@ const styles = StyleSheet.create({
   messageText: {
     fontSize: 16,
     fontWeight: "800",
-    color: "#46295a",
+    color: "#AFE1AF",
     alignItems: "center",
     marginTop: 20
-  }
+  },
+  featuredFirstLine:{
+    display:'flex',
+    flexDirection: 'row',
+    alignContent:'space-between',
+  },
+  frameMaisPedido:{
+
+  },
+  maisPedido:{
+    marginRight: 0,
+    display:'flex',
+  },
 });
