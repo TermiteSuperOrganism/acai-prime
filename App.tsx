@@ -1,10 +1,11 @@
 import { Ionicons } from '@expo/vector-icons';
+import Feather from '@expo/vector-icons/Feather';
+import AntDesign from '@expo/vector-icons/AntDesign';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { Image, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import CoffeeCard from './components/DishCard';
 import CustomButton from './components/CustomButton';
 import DishCard from './components/DishCard';
 
@@ -42,7 +43,7 @@ export default function App() {
               style={styles.image} />
             <View style={styles.featuredFirstLine}>
               <Text style={styles.featuredTitle}>Açaí Turbinado 500ml</Text>
-              <View style={styles.frameMaisPedido}><Text style={styles.maisPedido}><Ionicons name="shopping-bag" size={20} color="#2f2b2c"></Ionicons>Mais pedido</Text></View>
+              <View style={styles.frameMaisPedido}><Text style={styles.maisPedido}><Feather name="shopping-bag" size={20} color="#2f2b2c"></Feather>Mais pedido</Text></View>
             </View>
             <Text style={styles.featuredDescription}>Açaí puro batido com morango, banana, leite condensado e granola crocante</Text>
             <Text style={styles.featuredPrice}>R$ 22,90</Text>
