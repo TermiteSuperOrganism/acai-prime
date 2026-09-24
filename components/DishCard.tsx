@@ -1,5 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import AntDesign from '@expo/vector-icons/AntDesign';
+import Entypo from '@expo/vector-icons/Entypo';
 import { Image, ImageSourcePropType, KeyboardAvoidingView, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 type DishCardProps = {
@@ -8,19 +9,21 @@ type DishCardProps = {
     description: string;
     price: string;
 };
-export default function DishCard({ imageSrc,name, description, price }: DishCardProps) {
+export default function DishCard({ imageSrc, name, description, price }: DishCardProps) {
     return (
-        
-            <View style={styles.cardItem}>
-                <Image 
-                    source={imageSrc}
-                    style={styles.image}/>
-                <Text style={styles.cardTitle}>{name}</Text>
-                <Text style={styles.cardDescription}>{description}</Text>
+
+        <View style={styles.cardItem}>
+            <Image
+                source={imageSrc}
+                style={styles.image} />
+            <Text style={styles.cardTitle}>{name}</Text>
+            <Text style={styles.cardDescription}>{description}</Text>
+            <Text style={styles.bottomLine}>
                 <Text style={styles.cardPrice}>R$ {price}</Text>
-                <AntDesign name='plus-circle' size={20} color="#2f2b2c"></AntDesign>
-            </View>
-        
+                <Entypo name='circle-with-plus' size={20} color="#46295a"></Entypo>
+            </Text>
+        </View>
+
     );
 }
 const styles = StyleSheet.create({
@@ -59,9 +62,14 @@ const styles = StyleSheet.create({
         marginTop: 12
     },
     image: {
-    width: "100%",
-    height: 188,
-    borderRadius: 16,
-    marginBottom: 16
-  },
+        width: "100%",
+        height: 188,
+        borderRadius: 16,
+        marginBottom: 16
+    },
+    bottomLine: {
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent:'space-between',
+    },
 })

@@ -17,7 +17,7 @@ export default function App() {
     if (name.trim() === '') {
       setMessage('Por favor, informe seu nome!')
     } else {
-      setMessage(`${<Ionicons name="checkmark-circle" size={20} color="#2f2b2c"></Ionicons>}Olá, ${name}! Pedido iniciado com sucesso`)
+      setMessage(`Olá, ${name}! Pedido iniciado com sucesso`)
     }
   }
 
@@ -43,11 +43,13 @@ export default function App() {
               style={styles.image} />
             <View style={styles.featuredFirstLine}>
               <Text style={styles.featuredTitle}>Açaí Turbinado 500ml</Text>
-              <View style={styles.frameMaisPedido}><Text style={styles.maisPedido}><Feather name="shopping-bag" size={20} color="#2f2b2c"></Feather>Mais pedido</Text></View>
+              <View style={styles.frameMaisPedido}><Text style={styles.maisPedido}>Mais pedido</Text></View>
             </View>
             <Text style={styles.featuredDescription}>Açaí puro batido com morango, banana, leite condensado e granola crocante</Text>
-            <Text style={styles.featuredPrice}>R$ 22,90</Text>
-            <Text>Adicionar</Text>
+            <View style={styles.bottomLine}>
+              <Text style={styles.featuredPrice}>R$ 22,90</Text>
+              <Text style={styles.adicionar}><Feather name="shopping-bag" size={15} color="white"></Feather>Adicionar</Text>
+            </View>
           </View>
           {/*Card*/}
         </View>
@@ -74,7 +76,7 @@ export default function App() {
           <CustomButton title={'Fazer meu pedido'} onPress={handleOrder} />
 
           {message !== '' && (
-            <Text style={styles.messageText}>{message}</Text>
+            <Text style={styles.messageText}><Ionicons name="checkmark-circle" size={20} color="#50C878"></Ionicons>{message}</Text>
           )}
         </View>
         {/*Body*/}
@@ -188,20 +190,38 @@ const styles = StyleSheet.create({
   messageText: {
     fontSize: 16,
     fontWeight: "800",
-    color: "#AFE1AF",
+    color: '#50C878',
+    backgroundColor:"#ECFFDC",
     alignItems: "center",
-    marginTop: 20
+    marginTop: 20,
+    borderRadius: 16,
   },
   featuredFirstLine:{
     display:'flex',
     flexDirection: 'row',
     alignContent:'space-between',
+    justifyContent:'space-between',
   },
   frameMaisPedido:{
-
+    
   },
   maisPedido:{
     marginRight: 0,
     display:'flex',
+    backgroundColor:'#B069DB',
+    color:"#46295a",
+    fontSize:16,
+    borderRadius: 16,
+  },
+  bottomLine:{
+    display:'flex',
+    flexDirection: 'row',
+    alignContent:'space-between',
+    justifyContent:'space-between',
+  },
+  adicionar:{
+    backgroundColor:"#6E00B3",
+    color:'white',
+    borderRadius: 16,
   },
 });
