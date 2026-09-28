@@ -20,7 +20,7 @@ export default function DishCard({ imageSrc, name, description, price }: DishCar
             <Text style={styles.cardDescription}>{description}</Text>
             <Text style={styles.bottomLine}>
                 <Text style={styles.cardPrice}>R$ {price}</Text>
-                <Entypo name='circle-with-plus' size={20} color="#46295a"></Entypo>
+                <Entypo name='circle-with-plus' size={20} color="#7B1FA2"></Entypo>
             </Text>
         </View>
 
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     cardPrice: {
         fontSize: 16,
         fontWeight: "800",
-        color: "#46295a",
+        color: "#7B1FA2",
         marginTop: 12
     },
     image: {

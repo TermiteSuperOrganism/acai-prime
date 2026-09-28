@@ -76,7 +76,7 @@ export default function App() {
           <CustomButton title={'Fazer meu pedido'} onPress={handleOrder} />
 
           {message !== '' && (
-            <Text style={styles.messageText}><Ionicons name="checkmark-circle" size={20} color="#50C878"></Ionicons>{message}</Text>
+            <Text style={styles.messageText}><Ionicons name="checkmark-circle" size={20} color="#2E7D32"></Ionicons>{message}</Text>
           )}
         </View>
         {/*Body*/}
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
   featuredPrice: {
     fontSize: 20,
     fontWeight: '800',
-    color: "#46295a",
+    color: "#7B1FA2",
     marginTop: 8
   },
   sectionTitle: {
@@ -190,8 +190,8 @@ const styles = StyleSheet.create({
   messageText: {
     fontSize: 16,
     fontWeight: "800",
-    color: '#50C878',
-    backgroundColor:"#ECFFDC",
+    color: '#2E7D32',
+    backgroundColor:"#E8F5E9",
     alignItems: "center",
     marginTop: 20,
     borderRadius: 16,
@@ -208,8 +208,8 @@ const styles = StyleSheet.create({
   maisPedido:{
     marginRight: 0,
     display:'flex',
-    backgroundColor:'#B069DB',
-    color:"#46295a",
+    backgroundColor:'#F3E5F5',
+    color:"#7B1FA2",
     fontSize:16,
     borderRadius: 16,
   },
@@ -220,7 +220,7 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
   },
   adicionar:{
-    backgroundColor:"#6E00B3",
+    backgroundColor:"#7B1FA2",
     color:'white',
     borderRadius: 16,
   },
